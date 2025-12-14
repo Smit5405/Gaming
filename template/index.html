@@ -1,0 +1,623 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block body %}
+
+<link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+<link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+<!-- Banner Section start -->
+    <section class="banner-section index index-4">
+        <div class="overlay">
+            <div class="banner-content">
+                <div class="container wow fadeInUp">
+                    <div class="row justify-content-center align-items-center">
+                        <div class="col-xl-8 col-md-8">
+                            <div class="main-content">
+                                <div class="top-area section-text text-center">
+                                    <h5 class="sub-title">Esport coaching Platform</h5>
+                                    <h1 class="title">Take your game to the next level</h1>
+                                    <p>Get your game analyzed asynchronously by top quality coaches and start winning</p>
+                                </div>
+                                <div class="bottom-area d-xxl-flex justify-content-center">
+                                    <form action="#" class="w-100" method="post">
+                                        {% csrf_token %}
+                                        <div class="form-group d-flex justify-content-between align-items-center">
+                                            <div class="input-area d-flex align-items-center flex-auto">
+                                                <img src="{% static 'assets/images/icon/search-icon-2.png' %}" alt="icon">
+                                                <input type="text" placeholder="Search Coach">
+                                            </div>
+                                            <button class="cmn-btn">Find Now</button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="explore-now">
+            <div class="overlay">
+                <div class="container">
+                    <div class="row cus-mar align-items-center">
+                        <div class="col-lg-4 col-md-6">
+                            <div class="single-area text-center">
+                                <div class="icon-area">
+                                    <img src="{% static 'assets/images/icon/explore-now-icon-1.png' %}" alt="icon">
+                                </div>
+                                <div class="text-area">
+                                    <p class="mdr">INTERACTIVE</p>
+                                    <h5>COURSES</h5>
+                                </div>
+                                <a href="register.html" class="cmn-btn">ENROLL</a>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6">
+                            <div class="single-area text-center">
+                                <div class="icon-area">
+                                    <img src="{% static 'assets/images/icon/explore-now-icon-2.png' %}" alt="icon">
+                                </div>
+                                <div class="text-area">
+                                    <p class="mdr">LIVE 1 TO 1</p>
+                                    <h5>COACHING</h5>
+                                </div>
+                                <a href="register.html" class="cmn-btn">BOOK NOW</a>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6">
+                            <div class="single-area text-center">
+                                <div class="icon-area">
+                                    <img src="{% static 'assets/images/icon/explore-now-icon-3.png' %}" alt="icon">
+                                </div>
+                                <div class="text-area">
+                                    <p class="mdr">EVENTS &amp; DISCORD</p>
+                                    <h5>COMMUNITY</h5>
+                                </div>
+                                <a href="register.html" class="cmn-btn">JOIN US</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Banner Section end -->
+
+    <!-- Explore our Coaches start -->
+    <section class="explore-coaches">
+        <div class="overlay pt-120 pb-12h0">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-7">
+                        <div class="section-header text-center">
+                            <h5 class="sub-title">IMPROVE WITH COURSES & COACHES</h5>
+                            <h2 class="title">Explore our Coaches</h2>
+                            <p>Find Coaches of your eSports game</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="swiper-container explore-slider">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <img src="{% static 'assets/images/card-game-1.png' %}" alt="image"/>
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="{% static 'assets/images/card-game-2.png' %}" alt="image"/>
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="{% static 'assets/images/card-game-3.png' %}" alt="image"/>
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="{% static 'assets/images/card-game-4.png' %}" alt="image"/>
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="{% static 'assets/images/card-game-5.png' %}" alt="image"/>
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="{% static 'assets/images/card-game-6.png' %}" alt="image"/>
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="{% static 'assets/images/card-game-3.png' %}" alt="image"/>
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="{% static 'assets/images/card-game-5.png' %}" alt="image"/>
+                                </div>
+                            </div>
+                            <div class="d-flex align-items-center justify-content-center">
+                                <div class="swiper-pagination"></div>
+                                <div class="swiper-button-next"></div>
+                                <div class="swiper-button-prev"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Explore our Coaches end -->
+
+    <!-- How it works start -->
+    <section class="how-works second">
+        <div class="overlay pt-120 pb-120">
+            <div class="container wow fadeInUp">
+                <div class="row justify-content-center">
+                    <div class="col-lg-7">
+                        <div class="section-header text-center">
+                            <h5 class="sub-title">IMPROVE WITH COURSES & COACHES</h5>
+                            <h2 class="title">Explore our Coaches</h2>
+                            <p>Find Coaches of your eSports game</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="popup-section justify-content-center text-center">
+                    <h4>see how it works</h4>
+                    <div class="popup-area pt-120 pb-120">
+                        <div class="magnific-area position-relative d-flex align-items-center justify-content-around">
+                            <a class="mfp-iframe popupvideo position-absolute" href="https://www.youtube.com/watch?v=Djz8Nc0Qxwk">
+                                <img src="{% static 'assets/images/icon/popup-icon.png' %}" alt="icon">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="row main-content">
+                    <div class="col-md-4">
+                        <div class="single-item text-center">
+                            <div class="thumb">
+                                <img src="{% static 'assets/images/icon/how-works-icon-1.png' %}" alt="icon">
+                                <span class="xlr">01</span>
+                            </div>
+                            <div class="text-area">
+                                <h5>Choose Your Game</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="single-item text-center">
+                            <div class="thumb">
+                                <img src="{% static 'assets/images/icon/how-works-icon-2.png' %}" alt="icon">
+                                <span class="xlr">02</span>
+                            </div>
+                            <div class="text-area">
+                                <h5>Find Your Coach</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="single-item text-center">
+                            <div class="thumb">
+                                <img src="{% static 'assets/images/icon/how-works-icon-3.png' %}" alt="icon">
+                                <span class="xlr">03</span>
+                            </div>
+                            <div class="text-area">
+                                <h5>Become a pro</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- How it works end -->
+
+    <!-- Choose Us start -->
+    <section class="choose-us">
+        <div class="overlay pb-120">
+            <div class="container">
+                <div class="main-content">
+                    <div class="row align-items-center justify-content-between">
+                        <div class="col-xl-6 cus-mar">
+                            <div class="section-text">
+                                <h5 class="sub-title">Why Choose Us</h5>
+                                <h2 class="title">Make your game play shine</h2>
+                                <p>Start with coaching from our gaming experts. Our coaches teach you all the tips to be player one in our Masterclass coaching video sessions</p>
+                            </div>
+                            <a href="register.html" class="cmn-btn alt">Join Now</a>
+                        </div>
+                        <div class="col-xl-6 res-mar">
+                            <div class="row align-items-center">
+                                <div class="col-6 cus-mar">
+                                    <div class="single-item">
+                                        <div class="thumb">
+                                            <img src="{% static 'assets/images/icon/choose-us-icon-1.png' %}" alt="icon">
+                                        </div>
+                                        <h5>Get mentored by the Best in the Game.</h5>
+                                    </div>
+                                    <div class="single-item">
+                                        <div class="thumb">
+                                            <img src="{% static 'assets/images/icon/choose-us-icon-2.png' %}" alt="icon">
+                                        </div>
+                                        <h5>Experience the grind of a Pro.</h5>
+                                    </div>
+                                    <div class="single-item">
+                                        <div class="thumb">
+                                            <img src="{% static 'assets/images/icon/choose-us-icon-3.png' %}" alt="icon">
+                                        </div>
+                                        <h5>Engage in Interactive sessions</h5>
+                                    </div>
+                                </div>
+                                <div class="col-6 cus-mar">
+                                    <div class="single-item">
+                                        <div class="thumb">
+                                            <img src="{% static 'assets/images/icon/choose-us-icon-4.png' %}" alt="icon">
+                                        </div>
+                                        <h5>Compete in Egamlio Tournaments.</h5>
+                                    </div>
+                                    <div class="single-item">
+                                        <div class="thumb">
+                                            <img src="{% static 'assets/images/icon/choose-us-icon-5.png' %}" alt="icon">
+                                        </div>
+                                        <h5>Connect with top Esports teams.</h5>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Choose Us end -->
+
+    <!-- Counter start -->
+    <div class="counter-section index-2">
+        <div class="container pb-120 wow fadeInUp">
+            <div class="main-content">
+                <div class="row cus-mar">
+                    <div class="col-lg-4 col-md-6">
+                        <div class="single-area d-flex align-items-center">
+                            <div class="img-area">
+                                <img src="{% static 'assets/images/icon/counter-icon-1.png' %}" alt="icon">
+                            </div>
+                            <div class="text-area">
+                                <h2><span class="counter">1230</span></h2>
+                                <p>Games</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="single-area d-flex align-items-center">
+                            <div class="img-area">
+                                <img src="{% static 'assets/images/icon/counter-icon-2.png' %}" alt="icon">
+                            </div>
+                            <div class="text-area">
+                                <h2><span class="counter">398</span><span>K</span></h2>
+                                <p>Pro Coaches</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="single-area d-flex align-items-center">
+                            <div class="img-area">
+                                <img src="{% static 'assets/images/icon/counter-icon-3.png' %}" alt="icon">
+                            </div>
+                            <div class="text-area">
+                                <h2><span class="counter">398</span><span>K</span></h2>
+                                <p>Pro Coaches</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Counter end -->
+
+    <!-- Top Coches start -->
+    <section class="top-coches">
+        <div class="overlay pt-120 pb-120">
+            <div class="container wow fadeInUp">
+                <div class="row justify-content-center">
+                    <div class="col-lg-6">
+                        <div class="section-text text-center">
+                            <h5 class="sub-title">Start your journey today!</h5>
+                            <h2 class="title">TOP COACHES</h2>
+                            <p>Ready to improve? Learn from the best.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row cus-mar">
+                    <div class="col-lg-3 col-sm-6">
+                        <div class="single-item text-center">
+                            <div class="thumb">
+                                <img src="{% static 'assets/images/top-coches-1.png' %}" alt="image">
+                            </div>
+                            <h5>Zaire Dokidis</h5>
+                            <p class="mdr">Age of Empires 2</p>
+                            <div class="social">
+                                <a href="javascript:void(0)"><i class="fab fa-twitter"></i></a>
+                                <a href="javascript:void(0)"><i class="fab fa-twitch"></i></a>
+                                <a href="javascript:void(0)"><i class="fab fa-youtube"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-sm-6">
+                        <div class="single-item text-center">
+                            <div class="thumb">
+                                <img src="{% static 'assets/images/top-coches-2.png' %}" alt="image">
+                            </div>
+                            <h5>Zaire Dorwart</h5>
+                            <p class="mdr">Learn dota 2</p>
+                            <div class="social">
+                                <a href="javascript:void(0)"><i class="fab fa-twitter"></i></a>
+                                <a href="javascript:void(0)"><i class="fab fa-twitch"></i></a>
+                                <a href="javascript:void(0)"><i class="fab fa-youtube"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-sm-6">
+                        <div class="single-item text-center">
+                            <div class="thumb">
+                                <img src="{% static 'assets/images/top-coches-3.png' %}" alt="image">
+                            </div>
+                            <h5>Ahmad Dokidis</h5>
+                            <p class="mdr">League Of Legends</p>
+                            <div class="social">
+                                <a href="javascript:void(0)"><i class="fab fa-twitter"></i></a>
+                                <a href="javascript:void(0)"><i class="fab fa-twitch"></i></a>
+                                <a href="javascript:void(0)"><i class="fab fa-youtube"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-sm-6">
+                        <div class="single-item text-center">
+                            <div class="thumb">
+                                <img src="{% static 'assets/images/top-coches-4.png' %}" alt="image">
+                            </div>
+                            <h5>Lydia Torff</h5>
+                            <p class="mdr">Age of Empires 2</p>
+                            <div class="social">
+                                <a href="javascript:void(0)"><i class="fab fa-twitter"></i></a>
+                                <a href="javascript:void(0)"><i class="fab fa-twitch"></i></a>
+                                <a href="javascript:void(0)"><i class="fab fa-youtube"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12 text-center mt-40">
+                        <a href="javascript:void(0)" class="cmn-btn alt">browse more</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Top Coches end -->
+
+    <!-- FAQs In start -->
+    <section class="faqs-section">
+        <div class="overlay pb-120">
+            <div class="container">
+                <div class="row d-flex justify-content-center">
+                    <div class="col-lg-7">
+                        <div class="section-header text-center">
+                            <h5 class="sub-title">You have a Questions</h5>
+                            <h3 class="title">We have answers</h3>
+                            <p>If you haven’t found your answer to your questions, Contact Us</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row cus-mar justify-content-center">
+                    <div class="col-lg-8">
+                        <div class="accordion" id="accordionFaqs">
+                            <div class="accordion-item">
+                                <h6 class="accordion-header" id="headingLeftOne">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseLeftOne" aria-expanded="false"
+                                        aria-controls="collapseLeftOne">
+                                        WHAT IS EGAMLIO?
+                                    </button>
+                                </h6>
+                                <div id="collapseLeftOne" class="accordion-collapse collapse"
+                                    aria-labelledby="headingLeftOne" data-bs-parent="#accordionFaqs">
+                                    <div class="accordion-body">
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec in nibh ut odio tempus malesuada ac bibendum diam. In sollicitudin, dui a rutrum semper, lectus dui ultrices nisl, vitae facilisis arcu sem in ligula.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h6 class="accordion-header" id="headingLeftTwo">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseLeftTwo" aria-expanded="false"
+                                        aria-controls="collapseLeftTwo">
+                                        I'VE MADE ORDER. WHAT NOW?
+                                    </button>
+                                </h6>
+                                <div id="collapseLeftTwo" class="accordion-collapse collapse"
+                                    aria-labelledby="headingLeftTwo" data-bs-parent="#accordionFaqs">
+                                    <div class="accordion-body">
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec in nibh ut odio tempus malesuada ac bibendum diam. In sollicitudin, dui a rutrum semper, lectus dui ultrices nisl, vitae facilisis arcu sem in ligula.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h6 class="accordion-header" id="headingLeftThree">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseLeftThree" aria-expanded="false"
+                                        aria-controls="collapseLeftThree">
+                                        CAN I GET A DISCOUNT ON THIS PRICE?
+                                    </button>
+                                </h6>
+                                <div id="collapseLeftThree" class="accordion-collapse collapse"
+                                    aria-labelledby="headingLeftThree" data-bs-parent="#accordionFaqs">
+                                    <div class="accordion-body">
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec in nibh ut odio tempus malesuada ac bibendum diam. In sollicitudin, dui a rutrum semper, lectus dui ultrices nisl, vitae facilisis arcu sem in ligula.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h6 class="accordion-header" id="headingLeftFour">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseLeftFour" aria-expanded="false"
+                                        aria-controls="collapseLeftFour">
+                                        HOW CAN I KNOW YOU ARE LEGIT?
+                                    </button>
+                                </h6>
+                                <div id="collapseLeftFour" class="accordion-collapse collapse"
+                                    aria-labelledby="headingLeftFour" data-bs-parent="#accordionFaqs">
+                                    <div class="accordion-body">
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec in nibh ut odio tempus malesuada ac bibendum diam. In sollicitudin, dui a rutrum semper, lectus dui ultrices nisl, vitae facilisis arcu sem in ligula.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h6 class="accordion-header" id="headingLeftFive">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseLeftFive" aria-expanded="false"
+                                        aria-controls="collapseLeftFive">
+                                        WHY GET A COACH FROM EGAMLIO?
+                                    </button>
+                                </h6>
+                                <div id="collapseLeftFive" class="accordion-collapse collapse"
+                                    aria-labelledby="headingLeftFive" data-bs-parent="#accordionFaqs">
+                                    <div class="accordion-body">
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec in nibh ut odio tempus malesuada ac bibendum diam. In sollicitudin, dui a rutrum semper, lectus dui ultrices nisl, vitae facilisis arcu sem in ligula.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- FAQs In end -->
+
+    <!-- Call To Action start -->
+    <section class="call-action">
+        <div class="overlay pb-120">
+            <div class="container wow fadeInUp">
+                <div class="main-content">
+                    <div class="row align-items-center justify-content-between">
+                        <div class="col-lg-6">
+                            <div class="text-area">
+                                <div class="section-text">
+                                    <h2 class="title">Improve Your  Skill Now!</h2>
+                                    <p>Enjoy Your Gaming Experience More</p>
+                                </div>
+                                <a href="register.html" class="cmn-btn">Join Now</a>
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="sec-image">
+                                <img src="{% static 'assets/images/call-to-action.png' %}" alt="image">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Call To Action end -->
+
+    <!-- Testomonial start -->
+    <section class="testomonial">
+        <div class="overlay pb-120">
+            <div class="container wow fadeInUp">
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                        <div class="section-text text-center">
+                            <h5 class="sub-title">HEAR WHAT OUR PLAYERS HAVE TO SAY.</h5>
+                            <h2 class="title">DON'T TAKE OUR WORD FOR IT</h2>
+                            <p>Take your gaming skills to the next level in our Masterclass coaching</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="testimonials-carousel">
+                            <div class="single-slide">
+                                <div class="single">
+                                    <div class="img-area">
+                                        <img src="{% static 'assets/images/testimonials-img.png' %}" alt="image">
+                                    </div>
+                                    <div class="info-area">
+                                        <p class="xlr">‘’Egamlio is awesome! Had a great session with Saksham and got to learn a lot from a single workshop.’’</p>
+                                        <div class="bottom d-flex align-items-center">
+                                            <div class="img-area">
+                                                <img src="{% static 'assets/images/icon/check.png' %}" alt="image">
+                                            </div>
+                                            <p>JAYLON SARIS</p>
+                                            <span>FIFA Gamer</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="single-slide">
+                                <div class="single">
+                                    <div class="img-area">
+                                        <img src="{% static 'assets/images/testimonials-img.png' %}" alt="image">
+                                    </div>
+                                    <div class="info-area">
+                                        <p class="xlr">‘’Egamlio is awesome! Had a great session with Saksham and got to learn a lot from a single workshop.’’</p>
+                                        <div class="bottom d-flex align-items-center">
+                                            <div class="img-area">
+                                                <img src="{% static 'assets/images/icon/check.png' %}" alt="image">
+                                            </div>
+                                            <p>JAYLON SARIS</p>
+                                            <span>FIFA Gamer</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="single-slide">
+                                <div class="single">
+                                    <div class="img-area">
+                                        <img src="{% static 'assets/images/testimonials-img.png' %}" alt="image">
+                                    </div>
+                                    <div class="info-area">
+                                        <p class="xlr">‘’Egamlio is awesome! Had a great session with Saksham and got to learn a lot from a single workshop.’’</p>
+                                        <div class="bottom d-flex align-items-center">
+                                            <div class="img-area">
+                                                <img src="{% static 'assets/images/icon/check.png' %}" alt="image">
+                                            </div>
+                                            <p>JAYLON SARIS</p>
+                                            <span>FIFA Gamer</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="single-slide">
+                                <div class="single">
+                                    <div class="img-area">
+                                        <img src="{% static 'assets/images/testimonials-img.png' %}" alt="image">
+                                    </div>
+                                    <div class="info-area">
+                                        <p class="xlr">‘’Egamlio is awesome! Had a great session with Saksham and got to learn a lot from a single workshop.’’</p>
+                                        <div class="bottom d-flex align-items-center">
+                                            <div class="img-area">
+                                                <img src="{% static 'assets/images/icon/check.png' %}" alt="image">
+                                            </div>
+                                            <p>JAYLON SARIS</p>
+                                            <span>FIFA Gamer</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="single-slide">
+                                <div class="single">
+                                    <div class="img-area">
+                                        <img src="{% static 'assets/images/testimonials-img.png' %}" alt="image">
+                                    </div>
+                                    <div class="info-area">
+                                        <p class="xlr">‘’Egamlio is awesome! Had a great session with Saksham and got to learn a lot from a single workshop.’’</p>
+                                        <div class="bottom d-flex align-items-center">
+                                            <div class="img-area">
+                                                <img src="{% static 'assets/images/icon/check.png' %}" alt="image">
+                                            </div>
+                                            <p>JAYLON SARIS</p>
+                                            <span>FIFA Gamer</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Testomonial end -->
+
+{% endblock body %}

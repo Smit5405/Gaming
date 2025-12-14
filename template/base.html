@@ -1,0 +1,292 @@
+{% load static %}
+
+<!doctype html>
+<html lang="en">
+
+
+<!-- Mirrored from pixner.net/egamlio/main/index-4.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 19 Nov 2025 10:04:56 GMT -->
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Egamlio - Esports and Gaming Courses Website HTML Template</title>
+
+    <link rel="shortcut icon" href="{% static 'assets/images/fav.png' %}" type="image/x-icon">
+    <link rel="stylesheet" href="{% static 'assets/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/fontawesome.min.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/jquery-ui.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/plugin/nice-select.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/plugin/magnific-popup.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/plugin/slick.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/plugin/swiper.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/arafat-font.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/plugin/animate.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/style.css' %}">
+</head>
+
+<body>
+    <!-- start preloader -->
+    <div class="preloader" id="preloader"></div>
+    <!-- end preloader -->
+
+    <!-- Scroll To Top Start-->
+    <a href="javascript:void(0)" class="scrollToTop"><i class="fas fa-angle-double-up"></i></a>
+    <!-- Scroll To Top End -->
+
+    <!-- header-section start -->
+    <header class="header-section">
+        <div class="overlay">
+            <div class="container">
+                <div class="row d-flex header-area">
+                    <nav class="navbar navbar-expand-lg navbar-light">
+                        <a class="navbar-brand" href="index.html">
+                            <img src="{% static 'assets/images/logo.png' %}" class="logo" alt="logo">
+                        </a>
+                        <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#navbar-content">
+                            <i class="fas fa-bars"></i>
+                        </button>
+                        <div class="collapse navbar-collapse justify-content-end" id="navbar-content">
+                            <ul class="navbar-nav mr-auto mb-2 mb-lg-0">
+                                <li class="nav-item dropdown main-navbar">
+                                    <a class="nav-link dropdown-toggle active" href="/index/"
+                                        data-bs-toggle="dropdown" data-bs-auto-close="outside">Home</a>
+                                    <!-- <ul class="dropdown-menu main-menu shadow">
+                                        <li><a class="nav-link" href="index.html">Home 01</a></li>
+                                        <li><a class="nav-link" href="index-2.html">Home 02</a></li>
+                                        <li><a class="nav-link" href="index-3.html">Home 03</a></li>
+                                        <li><a class="nav-link" href="index-4.html">Home 04</a></li>
+                                        <li><a class="nav-link" href="index-5.html">Home 05</a></li>
+                                    </ul> -->
+                                </li>
+                                <li class="nav-item dropdown main-navbar">
+                                    <a class="nav-link dropdown-toggle" href="javascript:void(0)"
+                                        data-bs-toggle="dropdown" data-bs-auto-close="outside">Coaching</a>
+                                    <ul class="dropdown-menu main-menu shadow">
+                                        <li><a class="nav-link" href="coaching.html">Coaching</a></li>
+                                        <li><a class="nav-link" href="coaching-grid-list.html">Coaching 2</a></li>
+                                        <li><a class="nav-link" href="coaching-details.html">Coaching Details</a></li>
+                                    </ul>
+                                </li>
+                                <li class="nav-item dropdown main-navbar">
+                                    <a class="nav-link dropdown-toggle" href="javascript:void(0)"
+                                        data-bs-toggle="dropdown" data-bs-auto-close="outside">Coaches</a>
+                                    <ul class="dropdown-menu main-menu shadow">
+                                        <li><a class="nav-link" href="coaches-grid-list.html">Coaches</a></li>
+                                        <li><a class="nav-link" href="coaches-details.html">Coaches Details</a></li>
+                                    </ul>
+                                </li>
+                                <li class="nav-item dropdown main-navbar">
+                                    <a class="nav-link dropdown-toggle" href="javascript:void(0)"
+                                        data-bs-toggle="dropdown" data-bs-auto-close="outside">Pages</a>
+                                    <ul class="dropdown-menu main-menu shadow">
+                                        <li><a class="nav-link" href="about-us.html">About Us</a></li>
+                                        <li><a class="nav-link" href="become-coach.html">Become Coach</a></li>
+                                        <li class="dropend sub-navbar">
+                                            <a href="javascript:void(0)" class="dropdown-item dropdown-toggle"
+                                                data-bs-toggle="dropdown" data-bs-auto-close="outside">Dashboard</a>
+                                            <ul class="dropdown-menu sub-menu shadow">
+                                                <li><a class="nav-link" href="dashboard.html">Dashboard</a></li>
+                                                <li><a class="nav-link" href="dashboard-orders.html">My Orders</a></li>
+                                                <li><a class="nav-link" href="dashboard-personal-info.html">Information</a></li>
+                                                <li><a class="nav-link" href="dashboard-invoices.html">Invoices</a></li>
+                                                <li><a class="nav-link" href="dashboard-payment.html">Payment</a></li>
+                                                <li><a class="nav-link" href="dashboard-password.html">Password</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="dropend sub-navbar">
+                                            <a href="javascript:void(0)" class="dropdown-item dropdown-toggle"
+                                                data-bs-toggle="dropdown" data-bs-auto-close="outside">Gift Card</a>
+                                            <ul class="dropdown-menu sub-menu shadow">
+                                                <li><a class="nav-link" href="gift-card.html">Gift Card</a></li>
+                                                <li><a class="nav-link" href="gift-card-details.html">Gift Card Details</a></li>
+                                                <li><a class="nav-link" href="gift-card-details-2.html">Card Details 2</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="dropend sub-navbar">
+                                            <a href="javascript:void(0)" class="dropdown-item dropdown-toggle"
+                                                data-bs-toggle="dropdown" data-bs-auto-close="outside">Blog</a>
+                                            <ul class="dropdown-menu sub-menu shadow">
+                                                <li><a class="nav-link" href="blog.html">Blog</a></li>
+                                                <li><a class="nav-link" href="blog-single.html">Blog Details</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="dropend sub-navbar">
+                                            <a href="javascript:void(0)" class="dropdown-item dropdown-toggle"
+                                                data-bs-toggle="dropdown" data-bs-auto-close="outside">Booking Details</a>
+                                            <ul class="dropdown-menu sub-menu shadow">
+                                                <li><a class="nav-link" href="booking-details.html">Booking Details</a></li>
+                                                <li><a class="nav-link" href="booking-details-2.html">Booking Details 2</a></li>
+                                                <li><a class="nav-link" href="booking-details-3.html">Booking Details 3</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="dropend sub-navbar">
+                                            <a href="javascript:void(0)" class="dropdown-item dropdown-toggle"
+                                                data-bs-toggle="dropdown" data-bs-auto-close="outside">Shop</a>
+                                            <ul class="dropdown-menu sub-menu shadow">
+                                                <li><a class="nav-link" href="shop-grid-list.html">Shop</a></li>
+                                                <li><a class="nav-link" href="shop-single.html">Shop Single</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a class="nav-link" href="loyalty.html">Loyalty</a></li>
+                                        <li><a class="nav-link" href="seller-details.html">Seller Details</a></li>
+                                        <li><a class="nav-link" href="careers.html">Careers</a></li>
+                                        <li><a class="nav-link" href="faq.html">FAQs</a></li>
+                                        <li><a class="nav-link" href="how-works.html">How It Works</a></li>
+                                        <li><a class="nav-link" href="cart.html">Cart</a></li>
+                                        <li><a class="nav-link" href="terms-conditions.html">Terms Conditions</a></li>
+                                        <li><a class="nav-link" href="privacy-policy.html">Privacy Policy</a></li>
+                                        <li><a class="nav-link" href="error.html">Error</a></li>
+                                    </ul>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="/contact/">Contact Us</a>
+                                </li>
+                            </ul>
+                            <div class="right-area header-action d-flex align-items-center max-un">
+                                {% if user.is_authenticated %}
+                                    <a href="/logout/" class="login">Logout</a>
+                                {% else %}
+                                    <a href="/login/">Login</a>
+                                {% endif %}
+                                <a href="/register/" class="cmn-btn">Sign Up
+                                    <i class="icon-d-right-arrow-2"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- header-section end -->
+
+    {% block body %}
+    {% endblock body %}
+
+    <!-- Footer Area Start -->
+    <footer class="footer-section">
+        <div class="container">
+            <div class="newsletter">
+                <div class="row justify-content-center">
+                    <div class="col-lg-6">
+                        <div class="section-area mb-30 text-center">
+                            <h5 class="sub-title">Get ready for the next level</h5>
+                            <h3 class="title">Subscribe for updates</h3>
+                        </div>
+                        <form action="#">
+                            <div class="form-group d-flex align-items-center">
+                                <img src="{% static 'assets/images/icon/email.png' %}" alt="icon">
+                                <input type="text" placeholder="Your email address">
+                                <button class="cmn-btn">Subscribe</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-area pt-120">
+                <div class="footer-top pb-120">
+                    <div class="row">
+                        <div class="col-xl-3 col-6">
+                            <div class="footer-box">
+                                <h5>Company</h5>
+                                <ul class="footer-link">
+                                    <li><a href="about-us.html">About Us</a></li>
+                                    <li><a href="how-works.html">How It Works</a></li>
+                                    <li><a href="careers.html">Careers</a></li>
+                                    <li><a href="about-us.html">Customer Reviews</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-6">
+                            <div class="footer-box">
+                                <h5>COACHES</h5>
+                                <ul class="footer-link">
+                                    <li><a href="become-coach.html">Become a Coach</a></li>
+                                    <li><a href="coaches-grid-list.html">Our Coaches</a></li>
+                                    <li><a href="coaches-details.html">Coach Demo</a></li>
+                                    <li><a href="coaching-grid-list.html">Our Coaching</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-6">
+                            <div class="footer-box">
+                                <h5>SUPPORT</h5>
+                                <ul class="footer-link">
+                                    <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                                    <li><a href="terms-conditions.html">Terms of Use</a></li>
+                                    <li><a href="faq.html">FAQ</a></li>
+                                    <li><a href="terms-conditions.html">Security</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-6">
+                            <div class="social">
+                                <h5>FOLLOW US</h5>
+                                <ul class="footer-link">
+                                    <li><a href="javascript:void(0)">
+                                        <span><i class="fab fa-facebook-f"></i></span>
+                                        facebook
+                                    </a></li>
+                                    <li><a href="javascript:void(0)">
+                                        <span><i class="fab fa-twitter"></i></span>
+                                        twitter
+                                    </a></li>
+                                    <li><a href="javascript:void(0)">
+                                        <span><i class="fab fa-twitch"></i></span>
+                                        twitch
+                                    </a></li>
+                                    <li><a href="javascript:void(0)">
+                                        <span><i class="fab fa-youtube"></i></span>
+                                        youtube
+                                    </a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <div class="row justify-content-between align-items-center">
+                        <div class="col-lg-6 d-flex justify-content-center justify-content-lg-start order-lg-0 order-1">
+                            <div class="copyright text-center">
+                                <p>Copyright © 2022 Egamlio | Designed by <a href="https://themeforest.net/user/uiaxis">UIAXIS.</a></p>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="language d-flex align-items-center justify-content-center justify-content-lg-end">
+                                <h6 class="m-none">Select your language</h6>
+                                <select>
+                                    <Option>English</Option>
+                                    <Option>Arabic</Option>
+                                    <Option>Bangla</Option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer Area End -->
+
+    <!--==================================================================-->
+    <script src="{% static 'assets/js/jquery.min.js' %}"></script>
+    <script src="{% static 'assets/js/jquery-ui.js' %}"></script>
+    <script src="{% static 'assets/js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'assets/js/fontawesome.js' %}"></script>
+    <script src="{% static 'assets/js/plugin/slick.js' %}"></script>
+    <script src="{% static 'assets/js/plugin/swiper.js' %}"></script>
+    <script src="{% static 'assets/js/plugin/jquery.nice-select.min.js' %}"></script>
+    <script src="{% static 'assets/js/plugin/counter.js' %}"></script>
+    <script src="{% static 'assets/js/plugin/waypoint.min.js' %}"></script>
+    <script src="{% static 'assets/js/plugin/jquery.magnific-popup.min.js' %}"></script>
+    <script src="{% static 'assets/js/plugin/wow.min.js' %}"></script>
+    <script src="{% static 'assets/js/plugin/plugin.js' %}"></script>
+    <script src="{% static 'assets/js/main.js' %}"></script>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015" integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ==" data-cf-beacon='{"version":"2024.11.0","token":"6e6444122ed94892b6dff27396bb5627","r":1,"server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
+</body>
+
+
+<!-- Mirrored from pixner.net/egamlio/main/index-4.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 19 Nov 2025 10:04:59 GMT -->
+</html>

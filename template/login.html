@@ -1,0 +1,150 @@
+<!doctype html>
+{% load static %}
+{% block body %}
+<html lang="en">
+
+
+<!-- Mirrored from pixner.net/egamlio/main/login.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 19 Nov 2025 10:06:11 GMT -->
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Egamlio - Esports and Gaming Courses Website HTML Template</title>
+
+    <link rel="shortcut icon" href="{% static 'assets/images/fav.png' %}" type="image/x-icon">
+    <link rel="stylesheet" href="{% static 'assets/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/fontawesome.min.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/jquery-ui.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/plugin/nice-select.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/plugin/magnific-popup.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/plugin/slick.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/plugin/ion.rangeSlider.min.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/plugin/swiper.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/arafat-font.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/plugin/animate.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/style.css' %}">
+</head>
+
+<body>
+    <!-- start preloader -->
+    <div class="preloader" id="preloader"></div>
+    <!-- end preloader -->
+
+    <!-- Scroll To Top Start-->
+    <a href="javascript:void(0)" class="scrollToTop"><i class="fas fa-angle-double-up"></i></a>
+    <!-- Scroll To Top End -->
+
+    <!-- Login Reg In start -->
+    <section class="login-reg">
+        <div class="overlay pb-120">
+            <div class="container">
+                <div class="top-area pt-4 mb-30">
+                    <div class="row d-flex align-items-center">
+                        <div class="col-sm-5 col">
+                            <a class="back-home" href="/">
+                                <img src="{% static 'assets/images/icon/left-icon.png' %}" alt="image">
+                                Back To Egamlio
+                            </a>
+                        </div>
+                        <div class="col-sm-2 text-center col">
+                            <a href="index-3.html">
+                                <img src="{% static 'assets/images/logo.png' %}" alt="image">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="row pt-120 d-flex justify-content-center">
+                    <div class="col-lg-6">
+                        <div class="login-reg-main text-center">
+                            <div class="form-area">
+                                <div class="section-text">
+                                    <h4>Welcome Back!</h4>
+                                    <p>We're so excited to see you again! Log In to your Egamlio Account!</p>
+                                </div>
+                                <form action="/login/" method="post">
+                                    {% csrf_token %}
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <div class="single-input">
+                                                <label for="email">Username</label>
+                                                <div class="input-box">
+                                                    <input type="text" placeholder="Enter Your Username" id="uname" name="uname">
+                                                </div>
+                                            </div>
+                                            <div class="single-input">
+                                                <label for="passInput">Password</label>
+                                                <div class="input-box">
+                                                    <input type="password" id="pass1" name="pass1" placeholder="Enter Your Password">
+                                                    <!-- <img class="showPass" src="{% static 'assets/images/icon/show-hide.png' %}" alt="icon"> -->
+                                                </div>
+                                            </div>
+                                            <div class="remember-me">
+                                                <label class="checkbox-single d-flex align-items-center">
+                                                    <span class="left-area">
+                                                        <span class="checkbox-area d-flex">
+                                                            <input type="checkbox" checked="checked">
+                                                            <span class="checkmark"></span>
+                                                        </span>
+                                                        <span class="item-title d-flex align-items-center">
+                                                            <span>Remember Me</span>
+                                                        </span>
+                                                    </span>
+                                                </label>
+                                                <a href="javascript:void(0)">Forgot Password</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- <button class="cmn-btn mt-40 w-100">Login</button> -->
+                                    
+                                        <button class="cmn-btn mt-40 w-100" type="submit" >Login</button>
+                                    
+                                </form>
+                                <div class="reg-with">
+                                    <div class="or">
+                                        <p>OR</p>
+                                    </div>
+                                    <div class="social">
+                                        <ul class="footer-link d-flex justify-content-center align-items-center">
+                                            <li><a href="javascript:void(0)"><i class="fab fa-facebook-f"></i></a></li>
+                                            <li><a href="javascript:void(0)"><i class="fab fa-google"></i></a></li>
+                                            <li><a href="javascript:void(0)"><i class="fab fa-twitch"></i></a></li>
+                                            <li><a href="javascript:void(0)"><i class="fab fa-apple"></i></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="account mt-30">
+                                <p>Don't have an account? <a href="/register/">Sign Up Here</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Login Reg In end -->
+
+    <!--==================================================================-->
+    <script src="{% static 'assets/js/jquery.min.js' %}"></script>
+    <script src="{% static 'assets/js/jquery-ui.js' %}"></script>
+    <script src="{% static 'assets/js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'assets/js/fontawesome.js' %}"></script>
+    <script src="{% static 'assets/js/plugin/slick.js' %}"></script>
+    <script src="{% static 'assets/js/plugin/ion.rangeSlider.min.js' %}"></script>
+    <script src="{% static 'assets/js/plugin/swiper.js' %}"></script>
+    <script src="{% static 'assets/js/plugin/jquery.nice-select.min.js' %}"></script>
+    <script src="{% static 'assets/js/plugin/counter.js' %}"></script>
+    <script src="{% static 'assets/js/plugin/jquery.downCount.js' %}"></script>
+    <script src="{% static 'assets/js/plugin/waypoint.min.js' %}"></script>
+    <script src="{% static 'assets/js/plugin/jquery.magnific-popup.min.js' %}"></script>
+    <script src="{% static 'assets/js/plugin/wow.min.js' %}"></script>
+    <script src="{% static 'assets/js/plugin/plugin.js' %}"></script>
+    <script src="{% static 'assets/js/main.js' %}"></script>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015" integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ==" data-cf-beacon='{"version":"2024.11.0","token":"6e6444122ed94892b6dff27396bb5627","r":1,"server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
+</body>
+
+
+<!-- Mirrored from pixner.net/egamlio/main/login.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 19 Nov 2025 10:06:12 GMT -->
+</html>
+{% endblock body %}
