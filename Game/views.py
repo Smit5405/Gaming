@@ -1,11 +1,14 @@
-from django.shortcuts import render,redirect
+from django.shortcuts import render,redirect,get_object_or_404
 from django.contrib import auth
+from .models import Game, CartItem 
 
 
 # Create your views here.
 
 def index(request):
-    return render(request, 'index.html')
+    games = Game.objects.all()
+    return render(request, 'index.html', {'games': games})
+
 
 def register(request):
     if request.method == 'POST':
@@ -52,3 +55,50 @@ def logout(request):
     auth.logout(request)
     print('Logout successfully!') 
     return redirect('/login/') 
+
+def about(request):
+    return render(request, 'about.html')
+
+
+def shop(request):
+    games = Game.objects.all()
+    return render(request, 'shop.html', {'games': games})
+
+def add_to_cart(request, game_id):
+    game = get_object_or_404(Game, id=game_id)
+
+    # check if already in cart
+    cart_item, created = CartItem.objects.get_or_create(game=game)
+    if not created:
+        cart_item.quantity += 1
+        cart_item.save()
+
+    return redirect('cart')
+
+def cart(request):
+    cart_items = CartItem.objects.all()
+    total_cost = sum(item.total_price() for item in cart_items)
+    return render(request, 'cart.html', {'cart_items': cart_items, 'total_cost': total_cost})
+
+def remove_from_cart(request, item_id):
+    item = get_object_or_404(CartItem, id=item_id)
+    item.delete()
+    return redirect('cart')
+
+def update_cart(request):
+    if request.method == "POST":
+        cart_items = CartItem.objects.all()
+
+        for item in cart_items:
+            new_qty = request.POST.get(f"quantity_{item.id}")
+            if new_qty and int(new_qty) > 0:
+                item.quantity = int(new_qty)
+                item.save()
+
+    return redirect('cart')
+
+def checkout(request):
+    cart_items = CartItem.objects.all()
+    total_cost = sum(item.total_price() for item in cart_items)
+
+    return render(request, 'checkout.html', {'cart_items': cart_items, 'total_cost': total_cost})

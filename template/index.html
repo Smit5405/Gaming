@@ -36,50 +36,7 @@
                 </div>
             </div>
         </div>
-        <div class="explore-now">
-            <div class="overlay">
-                <div class="container">
-                    <div class="row cus-mar align-items-center">
-                        <div class="col-lg-4 col-md-6">
-                            <div class="single-area text-center">
-                                <div class="icon-area">
-                                    <img src="{% static 'assets/images/icon/explore-now-icon-1.png' %}" alt="icon">
-                                </div>
-                                <div class="text-area">
-                                    <p class="mdr">INTERACTIVE</p>
-                                    <h5>COURSES</h5>
-                                </div>
-                                <a href="register.html" class="cmn-btn">ENROLL</a>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-6">
-                            <div class="single-area text-center">
-                                <div class="icon-area">
-                                    <img src="{% static 'assets/images/icon/explore-now-icon-2.png' %}" alt="icon">
-                                </div>
-                                <div class="text-area">
-                                    <p class="mdr">LIVE 1 TO 1</p>
-                                    <h5>COACHING</h5>
-                                </div>
-                                <a href="register.html" class="cmn-btn">BOOK NOW</a>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-6">
-                            <div class="single-area text-center">
-                                <div class="icon-area">
-                                    <img src="{% static 'assets/images/icon/explore-now-icon-3.png' %}" alt="icon">
-                                </div>
-                                <div class="text-area">
-                                    <p class="mdr">EVENTS &amp; DISCORD</p>
-                                    <h5>COMMUNITY</h5>
-                                </div>
-                                <a href="register.html" class="cmn-btn">JOIN US</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+        
     </section>
     <!-- Banner Section end -->
 
@@ -90,9 +47,9 @@
                 <div class="row justify-content-center">
                     <div class="col-lg-7">
                         <div class="section-header text-center">
-                            <h5 class="sub-title">IMPROVE WITH COURSES & COACHES</h5>
-                            <h2 class="title">Explore our Coaches</h2>
-                            <p>Find Coaches of your eSports game</p>
+                            <h5 class="sub-title">IMPROVE WITH Games</h5>
+                            <h2 class="title">Explore our Games</h2>
+                            <!-- <p>Find Coaches of your eSports game</p> -->
                         </div>
                     </div>
                 </div>
@@ -100,31 +57,17 @@
                     <div class="col-lg-12">
                         <div class="swiper-container explore-slider">
                             <div class="swiper-wrapper">
-                                <div class="swiper-slide">
-                                    <img src="{% static 'assets/images/card-game-1.png' %}" alt="image"/>
-                                </div>
-                                <div class="swiper-slide">
-                                    <img src="{% static 'assets/images/card-game-2.png' %}" alt="image"/>
-                                </div>
-                                <div class="swiper-slide">
-                                    <img src="{% static 'assets/images/card-game-3.png' %}" alt="image"/>
-                                </div>
-                                <div class="swiper-slide">
-                                    <img src="{% static 'assets/images/card-game-4.png' %}" alt="image"/>
-                                </div>
-                                <div class="swiper-slide">
-                                    <img src="{% static 'assets/images/card-game-5.png' %}" alt="image"/>
-                                </div>
-                                <div class="swiper-slide">
-                                    <img src="{% static 'assets/images/card-game-6.png' %}" alt="image"/>
-                                </div>
-                                <div class="swiper-slide">
-                                    <img src="{% static 'assets/images/card-game-3.png' %}" alt="image"/>
-                                </div>
-                                <div class="swiper-slide">
-                                    <img src="{% static 'assets/images/card-game-5.png' %}" alt="image"/>
-                                </div>
+                                {% for game in games %}
+                                    <div class="swiper-slide">
+                                        <img src="{% static 'assets/images/' %}{{ game.image }}" alt="{{ game.name }}">
+                                    </div>
+                                {% empty %}
+                                    <div class="swiper-slide">
+                                        <p>No games available</p>
+                                    </div>
+                                {% endfor %}
                             </div>
+
                             <div class="d-flex align-items-center justify-content-center">
                                 <div class="swiper-pagination"></div>
                                 <div class="swiper-button-next"></div>
@@ -200,190 +143,6 @@
         </div>
     </section>
     <!-- How it works end -->
-
-    <!-- Choose Us start -->
-    <section class="choose-us">
-        <div class="overlay pb-120">
-            <div class="container">
-                <div class="main-content">
-                    <div class="row align-items-center justify-content-between">
-                        <div class="col-xl-6 cus-mar">
-                            <div class="section-text">
-                                <h5 class="sub-title">Why Choose Us</h5>
-                                <h2 class="title">Make your game play shine</h2>
-                                <p>Start with coaching from our gaming experts. Our coaches teach you all the tips to be player one in our Masterclass coaching video sessions</p>
-                            </div>
-                            <a href="register.html" class="cmn-btn alt">Join Now</a>
-                        </div>
-                        <div class="col-xl-6 res-mar">
-                            <div class="row align-items-center">
-                                <div class="col-6 cus-mar">
-                                    <div class="single-item">
-                                        <div class="thumb">
-                                            <img src="{% static 'assets/images/icon/choose-us-icon-1.png' %}" alt="icon">
-                                        </div>
-                                        <h5>Get mentored by the Best in the Game.</h5>
-                                    </div>
-                                    <div class="single-item">
-                                        <div class="thumb">
-                                            <img src="{% static 'assets/images/icon/choose-us-icon-2.png' %}" alt="icon">
-                                        </div>
-                                        <h5>Experience the grind of a Pro.</h5>
-                                    </div>
-                                    <div class="single-item">
-                                        <div class="thumb">
-                                            <img src="{% static 'assets/images/icon/choose-us-icon-3.png' %}" alt="icon">
-                                        </div>
-                                        <h5>Engage in Interactive sessions</h5>
-                                    </div>
-                                </div>
-                                <div class="col-6 cus-mar">
-                                    <div class="single-item">
-                                        <div class="thumb">
-                                            <img src="{% static 'assets/images/icon/choose-us-icon-4.png' %}" alt="icon">
-                                        </div>
-                                        <h5>Compete in Egamlio Tournaments.</h5>
-                                    </div>
-                                    <div class="single-item">
-                                        <div class="thumb">
-                                            <img src="{% static 'assets/images/icon/choose-us-icon-5.png' %}" alt="icon">
-                                        </div>
-                                        <h5>Connect with top Esports teams.</h5>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- Choose Us end -->
-
-    <!-- Counter start -->
-    <div class="counter-section index-2">
-        <div class="container pb-120 wow fadeInUp">
-            <div class="main-content">
-                <div class="row cus-mar">
-                    <div class="col-lg-4 col-md-6">
-                        <div class="single-area d-flex align-items-center">
-                            <div class="img-area">
-                                <img src="{% static 'assets/images/icon/counter-icon-1.png' %}" alt="icon">
-                            </div>
-                            <div class="text-area">
-                                <h2><span class="counter">1230</span></h2>
-                                <p>Games</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6">
-                        <div class="single-area d-flex align-items-center">
-                            <div class="img-area">
-                                <img src="{% static 'assets/images/icon/counter-icon-2.png' %}" alt="icon">
-                            </div>
-                            <div class="text-area">
-                                <h2><span class="counter">398</span><span>K</span></h2>
-                                <p>Pro Coaches</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6">
-                        <div class="single-area d-flex align-items-center">
-                            <div class="img-area">
-                                <img src="{% static 'assets/images/icon/counter-icon-3.png' %}" alt="icon">
-                            </div>
-                            <div class="text-area">
-                                <h2><span class="counter">398</span><span>K</span></h2>
-                                <p>Pro Coaches</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Counter end -->
-
-    <!-- Top Coches start -->
-    <section class="top-coches">
-        <div class="overlay pt-120 pb-120">
-            <div class="container wow fadeInUp">
-                <div class="row justify-content-center">
-                    <div class="col-lg-6">
-                        <div class="section-text text-center">
-                            <h5 class="sub-title">Start your journey today!</h5>
-                            <h2 class="title">TOP COACHES</h2>
-                            <p>Ready to improve? Learn from the best.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="row cus-mar">
-                    <div class="col-lg-3 col-sm-6">
-                        <div class="single-item text-center">
-                            <div class="thumb">
-                                <img src="{% static 'assets/images/top-coches-1.png' %}" alt="image">
-                            </div>
-                            <h5>Zaire Dokidis</h5>
-                            <p class="mdr">Age of Empires 2</p>
-                            <div class="social">
-                                <a href="javascript:void(0)"><i class="fab fa-twitter"></i></a>
-                                <a href="javascript:void(0)"><i class="fab fa-twitch"></i></a>
-                                <a href="javascript:void(0)"><i class="fab fa-youtube"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-sm-6">
-                        <div class="single-item text-center">
-                            <div class="thumb">
-                                <img src="{% static 'assets/images/top-coches-2.png' %}" alt="image">
-                            </div>
-                            <h5>Zaire Dorwart</h5>
-                            <p class="mdr">Learn dota 2</p>
-                            <div class="social">
-                                <a href="javascript:void(0)"><i class="fab fa-twitter"></i></a>
-                                <a href="javascript:void(0)"><i class="fab fa-twitch"></i></a>
-                                <a href="javascript:void(0)"><i class="fab fa-youtube"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-sm-6">
-                        <div class="single-item text-center">
-                            <div class="thumb">
-                                <img src="{% static 'assets/images/top-coches-3.png' %}" alt="image">
-                            </div>
-                            <h5>Ahmad Dokidis</h5>
-                            <p class="mdr">League Of Legends</p>
-                            <div class="social">
-                                <a href="javascript:void(0)"><i class="fab fa-twitter"></i></a>
-                                <a href="javascript:void(0)"><i class="fab fa-twitch"></i></a>
-                                <a href="javascript:void(0)"><i class="fab fa-youtube"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-sm-6">
-                        <div class="single-item text-center">
-                            <div class="thumb">
-                                <img src="{% static 'assets/images/top-coches-4.png' %}" alt="image">
-                            </div>
-                            <h5>Lydia Torff</h5>
-                            <p class="mdr">Age of Empires 2</p>
-                            <div class="social">
-                                <a href="javascript:void(0)"><i class="fab fa-twitter"></i></a>
-                                <a href="javascript:void(0)"><i class="fab fa-twitch"></i></a>
-                                <a href="javascript:void(0)"><i class="fab fa-youtube"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-12 text-center mt-40">
-                        <a href="javascript:void(0)" class="cmn-btn alt">browse more</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- Top Coches end -->
 
     <!-- FAQs In start -->
     <section class="faqs-section">

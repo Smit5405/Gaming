@@ -1,0 +1,119 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block body %}
+
+    <!-- Banner Section start -->
+    <section class="banner-section inner-banner loyalty-banner coach">
+        <div class="overlay">
+            <div class="banner-content">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-8 col-md-10">
+                            <div class="main-content">
+                                <h2>Our Shop</h2>
+                                <div class="breadcrumb-area">
+                                    <nav aria-label="breadcrumb">
+                                        <ol class="breadcrumb d-flex align-items-center">
+                                            <li class="breadcrumb-item"><a href="/">Home</a></li>
+                                            <li class="breadcrumb-item"><a href="javascript:void(0)">Pages</a></li>
+                                            <li class="breadcrumb-item active" aria-current="page">Our Shop</li>
+                                        </ol>
+                                    </nav>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Banner Section end -->
+
+    <!-- Coaching start -->
+    <section class="coaching-section shop">
+        <div class="overlay pt-120 pb-120">
+            <div class="container wow fadeInUp">
+                <div class="row justify-content-between">
+                    
+                    <div class="col-xl-12 col-lg-10">
+                        <div class="grid-list-head">
+                            <div class="row justify-content-between">
+                                <div class="col-lg-6">
+                                    <p>Showing 1–12 of 20 results</p>
+                                </div>
+                                <div class="col-lg-6 col-md-2 d-none d-xl-flex align-items-center justify-content-end btn-area">
+                                    <i class="fas fa-th grid-btn active"></i>
+                                    <i class="fas fa-bars list-btn"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="all-items">
+                            {% for game in games %}
+                            <div class="single-item">
+                                <div class="top-area">
+                                    <div class="thumb">
+                                        <img src="{% static 'assets/images/' %}{{ game.image }}" width="150px" alt="{{ game.name }}">
+                                        <!-- <span>Sale</span> -->
+                                    </div>
+                                </div>
+
+                                <div class="aurthor-content">
+                                    <div class="coaches-area">
+                                        <a href="#"><h6>{{ game.name }}</h6></a>
+
+                                        <div class="profile-area m-0">
+                                            <div class="review-vote">
+                                                <div class="d-flex align-items-center">
+                                                    <!-- <div class="star-area">
+                                                        <a><i class="fas fa-star"></i></a>
+                                                        <a><i class="fas fa-star"></i></a>
+                                                        <a><i class="fas fa-star"></i></a>
+                                                        <a><i class="fas fa-star"></i></a>
+                                                        <a><i class="fas fa-star"></i></a>
+                                                        <span>(5)</span>
+                                                    </div> -->
+                                                    <a href="#"><h6 style="color: black;">{{ game.description }}</h6></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="footer-area mt-4 d-flex align-items-center justify-content-between">
+                                        <p class="xlr">
+                                            ₹{{ game.cost }}
+                                        </p>
+
+                                        <div class="right-content d-flex align-items-center justify-content-between">
+                                            <a href="{% url 'add_to_cart' game.id %}" class="whishlist">
+                                                <img src="{% static 'assets/images/icon/cart-icon.png' %}" alt="icon">
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            {% endfor %}
+
+                        </div>
+                        <nav aria-label="Page navigation" class="d-flex justify-content-center pagination-area mt-30">
+                            <a class="page-btn previous" href="javascript:void(0)" aria-label="Previous">
+                                <i class="icon-e-double-right-arrow"></i>
+                                <span>Previous</span>
+                            </a>
+                            <ul class="pagination justify-content-center align-items-center">
+                                <li class="page-item"><a class="page-link" href="javascript:void(0)">01</a></li>
+                                <li class="page-item"><a class="page-link active" href="javascript:void(0)">02</a></li>
+                                <li class="page-item"><a class="page-link" href="javascript:void(0)">03</a></li>
+                                <li class="page-item"><a class="page-link" href="javascript:void(0)">04</a></li>
+                            </ul>
+                            <a class="page-btn next" href="javascript:void(0)" aria-label="Next">
+                                <span>Next</span>
+                                <i class="icon-e-double-right-arrow"></i>
+                            </a>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Coaching end -->
+{% endblock body %}
